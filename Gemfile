@@ -47,3 +47,4 @@ end
 
 
 gem "rack-cors", "~> 3.0"
+gem 'ruby-openai'

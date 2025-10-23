@@ -1,0 +1,542 @@
+<script>
+  jQuery(document).ready(function ($) {
+    $("#chat-send").click(function () {
+      const userMessage = $("#chat-input").val();
+      if (!userMessage) return;
+
+      $("#chat-log").append("<div><b>You:</b> " + userMessage + "</div>");
+      $("#chat-input").val("");
+
+      $.ajax({
+        url: "https://criminological-succinctly-fidelia.ngrok-free.dev/api/v1/messages",
+        method: "POST",
+        contentType: "application/json",
+        headers: {
+          Authorization: "Bearer super_secret_token_123", // your CHATBOT_API_KEY
+        },
+        data: JSON.stringify({
+          user_message: userMessage,
+          user_id: "wp-" + Math.random().toString(36).substr(2, 9),
+        }),
+        success: function (res) {
+          $("#chat-log").append("<div><b>Bot:</b> " + res.reply + "</div>");
+        },
+        error: function (xhr) {
+          console.error(xhr.responseText);
+          $("#chat-log").append(
+            "<div><b>Bot:</b> Sorry, something went wrong.</div>"
+          );
+        },
+      });
+    });
+  });
+</script>
+<section class="header__spacing">
+  <div class="text-center">
+    <h1>
+      <strong>US Sales Tax By State 2025</strong>
+    </h1>
+    [chatbot_widget]
+  </div>
+  <div class="map-container">[embeddable_sales_tax_map_desktop_php]</div>
+  <div class="container container__sitemap-page">
+    <div class="container__sitemap-page--items">
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <ul>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/alabama/"
+                        >Alabama</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/alaska/"
+                        >Alaska</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/arizona/"
+                        >Arizona</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/arkansas"
+                        >Arkansas</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/california/"
+                        >California</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/colorado/"
+                        >Colorado</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/connecticut/"
+                        >Connecticut</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/delaware/"
+                        >Delaware</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/district-of-columbia/"
+                        >District of Columbia</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/florida/">
+                        Florida
+                      </a>
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/georgia/"
+                        >Georgia</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/hawaii/"
+                        >Hawaii</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/idaho/"
+                        >Idaho</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <ul>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/illinois/"
+                        >Illinois</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/indiana/"
+                        >Indiana</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/iowa/"
+                        >Iowa</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/kansas/"
+                        >Kansas</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/kentucky/"
+                        >Kentucky</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/louisiana/"
+                        >Louisiana</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/maine/"
+                        >Maine</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/maryland/"
+                        >Maryland</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/massachusetts/"
+                        >Massachusetts</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/michigan/"
+                        >Michigan</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/minnesota/"
+                        >Minnesota</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/mississippi/"
+                        >Mississippi</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/missouri/"
+                        >Missouri</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <ul>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/montana/"
+                        >Montana</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/nebraska/"
+                        >Nebraska</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/nevada/"
+                        >Nevada</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/new-hampshire/"
+                        >New Hampshire</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/new-jersey/"
+                        >New Jersey</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/new-mexico/"
+                        >New Mexico</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/new-york/">
+                        New York
+                      </a>
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/north-carolina/"
+                        >North Carolina</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/north-dakota/"
+                        >North Dakota</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/ohio/"
+                        >Ohio</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/oklahoma/"
+                        >Oklahoma</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/oregon/"
+                        >Oregon</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/pennsylvania/"
+                        >Pennsylvania</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <ul>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/rhode-island/"
+                        >Rhode Island</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/south-carolina/"
+                        >South Carolina</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/south-dakota/"
+                        >South Dakota</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/tennessee/"
+                        >Tennessee</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/texas/"
+                        >Texas</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/utah/"
+                        >Utah</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/vermont/"
+                        >Vermont</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/virginia/"
+                        >Virginia</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/washington/"
+                        >Washington</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a
+                        href="https://taxhero.net/sales-tax/state/west-virginia/"
+                        >West Virginia</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/wisconsin/"
+                        >Wisconsin</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    <span>
+                      <a href="https://taxhero.net/sales-tax/state/wyoming/"
+                        >Wyoming</a
+                      >
+                    </span>
+                  </strong>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
